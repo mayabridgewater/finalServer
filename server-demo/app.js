@@ -7,6 +7,7 @@ var historyRouter = require('./routes/history');
 var startRouter = require('./routes/start');
 const rangeRouter = require('./routes/range');
 const guessRouter = require('./routes/guess');
+const winRouter = require('./routes/win');
 
 var app = express();
 
@@ -20,5 +21,6 @@ app.use('/history', historyRouter);
 app.use('/startgame', startRouter);
 app.use('/range', rangeRouter);
 app.use('/guess', guessRouter);
+app.use('/win', winRouter);
 
 module.exports = app;
