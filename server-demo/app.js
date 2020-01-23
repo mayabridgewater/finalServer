@@ -6,6 +6,7 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var startRouter = require('./routes/start');
 const rangeRouter = require('./routes/range');
+const guessRouter = require('./routes/guess');
 
 var app = express();
 
@@ -18,5 +19,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/startgame', startRouter);
 app.use('/range', rangeRouter);
+app.use('/guess', guessRouter);
 
 module.exports = app;
