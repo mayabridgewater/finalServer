@@ -13,7 +13,6 @@ router.get('/:id', async function(req, res, next) {
 })
 
 router.put('/', async function(req, res, next) {
-    console.log(req.body)
     try {
         await addGuess(req.body.guess, req.body.id);
         await updateGuessAmount(req.body.id);
